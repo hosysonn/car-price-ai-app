@@ -28,7 +28,7 @@ if st.button('Dự đoán giá xe'):
     })
 
     input_data = input_data.reindex(columns=model_columns, fill_value=0)
-    prediction = model.predict(input_data[0])
+    prediction = model.predict(input_data)[0]
     
     st.success(f"Mức giá đề xuất (Độ chính xác 66%): ${prediction:,.0f}")
     st.balloons()
